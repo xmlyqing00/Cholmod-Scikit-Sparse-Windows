@@ -36,9 +36,9 @@ mark_as_advanced(LIB_POSTFIX)
 # We want libraries to be named "libXXX" and "libXXXd" in all compilers:
 # ------------------------------------------------------------------------
 set(CMAKE_DEBUG_POSTFIX  "d")
-IF(MSVC)
-	set(SP_LIB_PREFIX "lib")  # Libs are: "libXXX"
-ENDIF(MSVC)
+# IF(MSVC)
+# 	set(SP_LIB_PREFIX "lib")  # Libs are: "libXXX"
+# ENDIF(MSVC)
 
 ## check if we can build metis	
 SET(BUILD_METIS_DEFAULT ON)	

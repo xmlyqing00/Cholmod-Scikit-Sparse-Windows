@@ -5,13 +5,16 @@
 ## 1. Overview
 
 It takes two steps to set up the CSC environment.
-
-   	1. Compile the `*.h`, `*.lib` and `*.dll` files of Cholmod. It can be included and linked for C/C++.
-   	2. Compile the python package Scikit-Sparse.
+1. Compile the `*.h`, `*.lib` and `*.dll` files of Cholmod. It can be included and linked for C/C++.
+2. Compile the python package Scikit-Sparse.
 
 This repository has been tested on Windows 10 64bit.
 
-Because metis package has many errors when compiling, I removed the metis package and modified the `CSC_ROOT/CMakeLists.txt`
+Because metis package has many errors when compiling, I removed the metis package and modified the `CSC_ROOT/CMakeLists.txt`.
+
+The `master` branch contains source code. You can compile it locally under the following instructions.
+
+The `build` branch contains the generated codes. You may download it and use the libraries located in `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install` directly.
 
 ## 2. Instructions
 

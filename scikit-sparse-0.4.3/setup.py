@@ -36,6 +36,7 @@ from setuptools import setup, find_packages, Extension
 import versioneer
 
 if __name__ == "__main__":
+
     setup(install_requires = ['numpy', 'scipy'],
           packages = find_packages(),
           package_data = {
@@ -66,10 +67,14 @@ if __name__ == "__main__":
           ext_modules = [
               Extension("sksparse.cholmod", ["sksparse/cholmod.pyx"],
                         include_dirs=[np.get_include(),
+                                      # Include suitesparse headers
+                                      "../suitesparse-metis-for-windows-1.3.1/build/install/include/suitesparse",
                                       sys.prefix + "/include",
                                       # Debian's suitesparse-dev installs to
                                       # /usr/include/suitesparse
                                       "/usr/include/suitesparse"],
-                        library_dirs=[],
-                        libraries=['cholmod'])],
+                        library_dirs=["../suitesparse-metis-for-windows-1.3.1/build/install/lib64",
+                                      "../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows"],
+                        libraries=['cholmod', 'amd', 'btf', 'camd', 'ccolamd', 'colamd', 'cxsparse',
+                                   'klu', 'ldl', 'spqr', 'suitesparseconfig', 'umfpack', 'libblas', 'liblapack'])],
           )

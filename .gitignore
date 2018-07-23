@@ -1,0 +1,6 @@
+/suitesparse-metis-for-windows-1.3.1/build/
+
+scikit-sparse-0.4.3/__pycache__/
+scikit-sparse-0.4.3/build/
+scikit-sparse-0.4.3/dist/
+scikit-sparse-0.4.3/sksparse/cholmod.c

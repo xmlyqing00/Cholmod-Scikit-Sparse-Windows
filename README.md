@@ -1,5 +1,9 @@
 # Cholmod and Scikit-Sparse for Windows
 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+
+
 [Cholmod](http://www.cise.ufl.edu/research/sparse/SuiteSparse/) is a powerful package for sparse matrix calculation and [Scikit-Sparse](https://pypi.org/project/scikit-sparse) is a python interface. It is convenient to set up the Cholmod and Scikit-Sparse (CSC) environment in Linux and Mac OS, but it may be troublesome in Windows. Thanks to jlblancoc's package [suitesparse-metis-for-windows](https://github.com/jlblancoc/suitesparse-metis-for-windows), I make an improvement for python interface. Here are the instructions.
 
 ## 1. Overview

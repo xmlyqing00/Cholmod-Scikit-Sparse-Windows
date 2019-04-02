@@ -18,7 +18,7 @@ This repository has been tested on
 - Anaconda 3
 - Microsoft Visual C++ 17
 
-**This repository is not applicable to Python 2 (Anaconda 2) on Windows 10**. Because in the Step II, compiling C codes for Python 2 is required VC 9.0 (VS 2008), which can not be installed on Windows 10, the compiler used in the Step I is supposed to be the same as the one used in the Step II.
+**This repository is not applicable to Python 2 (Anaconda 2) on Windows 10**. Because in the Step II, compiling C codes for Python 2 requires VC 9.0 (VS 2008), which can not be installed on Windows 10. The compiler used in the Step I is supposed to be the same as the one used in the Step II.
 
 Because metis package has many errors when compiling, I removed the metis package and modified the `CSC_ROOT/CMakeLists.txt`.
 

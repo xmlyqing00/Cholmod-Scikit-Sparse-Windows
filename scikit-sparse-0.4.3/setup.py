@@ -42,6 +42,15 @@ if __name__ == "__main__":
           package_data = {
               "": ["test_data/*.mtx.gz"],
               },
+          data_files = [
+            ('sksparse', [
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libblas.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libgcc_s_sjlj-1.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libgfortran-3.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/liblapack.dll'),
+                  ('../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows/libquadmath-0.dll'),
+            ] ),
+          ],
           test_suite = "nose.collector",
           name = DISTNAME,
           version = versioneer.get_version(),
@@ -77,4 +86,4 @@ if __name__ == "__main__":
                                       "../suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows"],
                         libraries=['cholmod', 'amd', 'btf', 'camd', 'ccolamd', 'colamd', 'cxsparse',
                                    'klu', 'ldl', 'spqr', 'suitesparseconfig', 'umfpack', 'libblas', 'liblapack'])],
-          )
+    )

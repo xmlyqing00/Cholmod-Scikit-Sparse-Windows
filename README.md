@@ -5,7 +5,7 @@
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 
-[Cholmod](http://www.cise.ufl.edu/research/sparse/SuiteSparse/) is a powerful package for sparse matrix calculation and [Scikit-Sparse](https://pypi.org/project/scikit-sparse) is a python interface. It is convenient to set up the Cholmod and Scikit-Sparse (CSC) environment in Linux and Mac OS, but it may be troublesome in Windows. Thanks to jlblancoc's package [suitesparse-metis-for-windows](https://github.com/jlblancoc/suitesparse-metis-for-windows), I make an improvement for python interface. Here are the instructions.
+[Cholmod](http://www.cise.ufl.edu/research/sparse/SuiteSparse/) is a powerful package for sparse matrix calculation and [Scikit-Sparse](https://pypi.org/project/scikit-sparse) is a python interface. It is convenient to set up the Cholmod and Scikit-Sparse (CSC) environment in Linux and Mac OS, but it may be troublesome in Windows. Thanks to jlblancoc's package [suitesparse-metis-for-windows](https://github.com/jlblancoc/suitesparse-metis-for-windows), I make a modification for the python interface. Here are the instructions.
 
 ## 1. Overview
 
@@ -43,7 +43,7 @@ Because metis package has many errors when compiling, I removed the metis packag
    3. Click "Configure" and select "Visual Studio 15 2017 Win64" (for 64bit OS). Tips: "HAVE_COMPLEX" is not recommended.
    4. Click "Generate".
    5. Click "Open Project" to open the "SuiteSparseProject" solution.
-2. In Visual Studio, build the "INSTALL" project in "Release" mode. It may show hundreds of warnings, but it's OK.
+2. In Visual Studio, build the "INSTALL" project in "Release" mode. It may show hundreds of warnings, but it's OK. (Note: according to this [issue#2](https://github.com/xmlyqing00/Cholmod-Scikit-Sparse-Windows/issues/2#issuecomment-589835095) report, select "Release" mode is necessary in case of missing `cholmod.lib`.)
 3. `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install` contains the generated libraries. 
    - `*.h` header files are in `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install/include/suitesparse`
    - `*.lib` libraries are in `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install/lib64` and `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows`

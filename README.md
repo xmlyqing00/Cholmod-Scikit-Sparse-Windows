@@ -66,6 +66,10 @@ from sksparse.cholmod import cholesky
 
 If nothing happens, the installation is done! For detailed usage and test, please refer to `scikit-sparse-0.4.4/sksparse/test_cholmod.py`.
 
+
 ## 3 Update Logs
+Give me a star if you like this repository.
+Feel free to open an issue or start an pull request.
+
 - Thanks to the [Issue 4](https://github.com/xmlyqing00/Cholmod-Scikit-Sparse-Windows/issues/4), the scikit-sparse is upgraded from 0.4.3 to 0.4.4. Cython is not included in scikit-sparse 0.4.4.
 - Cython is added by [Pull 3](https://github.com/xmlyqing00/Cholmod-Scikit-Sparse-Windows/pull/3).

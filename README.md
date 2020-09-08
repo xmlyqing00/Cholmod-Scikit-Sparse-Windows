@@ -32,8 +32,8 @@ Because metis package has many errors when compiling, I removed the metis packag
 3. Download [CMake](https://cmake.org/).
 4. Clone or Download this repository, say `CSC_ROOT`. If you require the latest version, just download them and merge them with the target folders.
    - suitesparse-metis-for-windows version: 1.3.1
-   - scikit-sparse version: 0.4.4
-   - SuiteSparse version: 5.3.0 
+   - scikit-sparse version: 0.4.4. If you replace it by a new package, don't forget to **modify the `setup.py` to link the headers and libraries.**
+   - SuiteSparse version: 5.3.0. It is under the `suitesparse-metis-for-windows-1.3.1/`
 
 ### 2.1 Compile Cholmod
 
@@ -43,7 +43,7 @@ Because metis package has many errors when compiling, I removed the metis packag
    3. Click "Configure" and select "Visual Studio 15 2017 Win64" (for 64bit OS). Tips: Make sure to build in x64 mode. "HAVE_COMPLEX" is not recommended.
    4. Click "Generate".
    5. Click "Open Project" to open the "SuiteSparseProject" solution.
-2. In Visual Studio, build the "INSTALL" project in "Release" mode. It may show hundreds of warnings, but it's OK. (Note: according to this [issue#2](https://github.com/xmlyqing00/Cholmod-Scikit-Sparse-Windows/issues/2#issuecomment-589835095) report, select "Release" mode is necessary in case of missing `cholmod.lib`.)
+2. In Visual Studio, build the "INSTALL" project in "Release" mode. It may show hundreds of warnings, but it's OK. (Note: according to this [issue#2](https://github.com/xmlyqing00/Cholmod-Scikit-Sparse-Windows/issues/2#issuecomment-589835095) report, **select "Release" mode is necessary** in case of missing `cholmod.lib`.)
 3. `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install` contains the generated libraries. 
    - `*.h` header files are in `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install/include/suitesparse`
    - `*.lib` libraries are in `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install/lib64` and `CSC_ROOT/suitesparse-metis-for-windows-1.3.1/build/install/lib64/lapack_blas_windows`
